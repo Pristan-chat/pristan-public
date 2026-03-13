@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://www.pristan.chat/images/logo.svg" alt="Pristan" width="200" />
+  <img src="https://www.pristan.chat/logo.png" alt="Pristan" width="200" />
 </p>
 
 <h1 align="center">Pristan — Enterprise AI Agent Catalog</h1>
