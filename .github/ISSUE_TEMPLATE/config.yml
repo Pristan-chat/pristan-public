@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: General Inquiries
+    url: https://www.pristan.chat/enterprise
+    about: For questions about Pristan, visit our website or request a demo.
+  - name: Security Vulnerabilities
+    url: mailto:security@pristan.chat
+    about: Report security vulnerabilities via email. Do not open public issues.
+  - name: Contact Us
+    url: mailto:hello@pristan.chat
+    about: Reach out to the Pristan team directly.

@@ -1,0 +1,29 @@
+name: Close External PRs
+
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: `Thank you for your interest in Pristan! 🙏\n\nThis is a read-only informational repository — we do not accept pull requests here. The Pristan platform is developed in a private repository.\n\nIf you have questions or feedback, please reach out at [hello@pristan.chat](mailto:hello@pristan.chat).\n\nClosing this PR automatically.`
+            });
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              state: 'closed'
+            });
